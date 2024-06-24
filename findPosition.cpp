@@ -47,7 +47,7 @@ double consolidateAngleWithXYplane(double angleWithXYplane, Arms* Arm){
 }
 
 double consolidateAngleOfAxialTurn(double angleOfAxialTurn, Arms* Arm){
-
+    return angleOfAxialTurn;
 }
 
 double consolidatePositionOfX(Arms* Arm){
