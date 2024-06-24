@@ -43,7 +43,7 @@ double consolidateAngleWithXZplane(double angleWithXZPlane, Arms* Arm){
 }
 
 double consolidateAngleWithXYplane(double angleWithXYplane, Arms* Arm){
-
+    return angleWithXYplane;
 }
 
 double consolidateAngleOfAxialTurn(double angleOfAxialTurn, Arms* Arm){
