@@ -18,7 +18,6 @@ typedef struct {
     double endPointZ;
     double angleWithXZplane;
     double angleWithXYplane;
-    double angleWithXYplane;
     double angleOfAxialTurn;
 }Arms ;
 
@@ -27,7 +26,21 @@ Arms* LivePositions[noOfArms];
 Arms* targetPositions[noOfArms];
 }
 
-void setVertivalSwingAxisPositions(Arms* Arm, double angleWithXZplane, double lengthOfTheArm) {
+void setVerticalSwingAxisPositions(Arms* Arm, double angleWithXZplane, double lengthOfTheArm) {
     Arm->lengthOfTheArm = lengthOfTheArm;
-    Arm->angleWithXzplane = angleWithXZplane(angleWithXZplane);
+    Arm->angleWithXZplane = GetAngleWithXZplane(angleWithXZplane);
+    Arm->endPointX = getPositionOfX();
+    Arm->endPointY = getPositionOfY();
+}
+
+void setHorizontalSwingAxisPositions(Arms* Arm, double angleWithXYplane, double lengthOfTheArm) {
+    Arm->angleWithXYplane = GetAngleWithXYplane(angleWithXYplane);
+    Arm->endPointX = getPositionOfX();
+    Arm->endPointZ = getPositionOfZ();
+}
+
+void setHorizontalSwingAxisPositions(Arms* Arm, double angleOfAxialTurn, double lengthOfTheArm) {
+    Arm->angleWithXYplane = GetAngleWithXYplane(angleWithXYplane);
+    Arm->endPointY = getPositionOfY();
+    Arm->endPointZ = getPositionOfZ();
 }
