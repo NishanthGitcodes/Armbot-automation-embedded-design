@@ -21,4 +21,5 @@ typedef struct {
     double angleWithXYplane;
     double angleWithXYplane;
     double angleOfAxialTurn;
+    
 }Arms ;
