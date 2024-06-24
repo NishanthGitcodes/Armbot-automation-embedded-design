@@ -39,7 +39,7 @@ double findY(double lengthOfTheArm,double angleWithAPlane) {
 }
 
 double consolidateAngleWithXZplane(double angleWithXZPlane, Arms* Arm){
-    
+    return angleWithXZPlane;
 }
 
 double consolidateAngleWithXYplane(double angleWithXYplane, Arms* Arm){
